@@ -166,21 +166,21 @@ List<Otel> izmir = [
 List<Sehir_olustur> sehirler = [
   Sehir_olustur(
     //imageUrl: 'assets/images/antalya.jfif',
-    city: 'Antalya',
+    city: 'ANTALYA',
     country: 'Türkiye',
     // description: '',
     oteller: antalya,
   ),
   Sehir_olustur(
     //imageUrl: 'assets/images/antalya.jfif',
-    city: 'Muğla',
+    city: 'MUĞLA',
     country: 'Türkiye',
     //description: '',
     oteller: mugla,
   ),
   Sehir_olustur(
     // imageUrl: 'assets/images/antalya.jfif',
-    city: 'İzmir',
+    city: 'İZMİR',
     country: 'Türkiye',
     //description: '',
     oteller: izmir,

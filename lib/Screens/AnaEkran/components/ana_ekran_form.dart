@@ -62,14 +62,14 @@ class _AnaEkranFormState extends State<AnaEkranForm> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hello',
+                    'Merhaba',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   SizedBox(
                     height: 4,
                   ),
                   Text(
-                    '2124 nolu oda',
+                    '0001 nolu oda',
                     style: TextStyle(fontSize: 20),
                   ),
                 ],
@@ -178,7 +178,7 @@ class _AnaEkranFormState extends State<AnaEkranForm> {
                     color: Colors.blue,
                   ),
                   border: InputBorder.none,
-                  hintText: "How can we help you?"),
+                  hintText: "Size nasıl yardımcı olabiliriz?"),
             ),
           ),
         ),

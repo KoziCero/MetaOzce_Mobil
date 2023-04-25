@@ -3,6 +3,8 @@ import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../const/background.dart';
+
 class FavPage extends StatefulWidget {
   @override
   _FavPageState createState() => _FavPageState();
@@ -22,8 +24,9 @@ class _FavPageState extends State<FavPage> {
       return Text(stars);
     }
 
-    return Scaffold(
-      body: SafeArea(
+    return Background(
+      title: 'FAVORİLERİM',
+      child: SafeArea(
         child: Expanded(
             child: Column(
           children: [
@@ -153,7 +156,7 @@ class _FavPageState extends State<FavPage> {
                                                         Text(
                                                             '${listofDocumentSnap[index]['otelAdi']}',
                                                             style: TextStyle(
-                                                                fontSize: 11)),
+                                                                fontSize: 13)),
                                                         SizedBox(
                                                           height: 5,
                                                         ),

@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/otel_detail_page.dart';
 import 'package:meta_ozce_0/models/sehir_model.dart';
 
+import '../const/constant.dart';
 import '../models/otel_model.dart';
 
 class Sehir extends StatelessWidget {
@@ -49,7 +50,11 @@ class Sehir extends StatelessWidget {
         ),
         const SizedBox(
           width: 500,
-          child: Divider(height: 15, color: Colors.black),
+          child: Divider(
+            thickness: 2,
+            height: 15,
+            color: Color.fromRGBO(30, 136, 229, 0.781),
+          ),
         ),
         SizedBox(
           height: 300.0,
@@ -81,7 +86,14 @@ class Sehir extends StatelessWidget {
                           width: 200.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black,
+                                offset: Offset(0.0, 5.0),
+                                blurRadius: 7.0,
+                              ),
+                            ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -111,11 +123,11 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
-                              color: Colors.black26,
-                              offset: Offset(0.0, 2.0),
-                              blurRadius: 6.0,
+                              color: Colors.black,
+                              offset: Offset(0.0, 5.0),
+                              blurRadius: 7.0,
                             ),
                           ],
                         ),
@@ -207,7 +219,11 @@ class Sehir extends StatelessWidget {
         ),
         const SizedBox(
           width: 500,
-          child: Divider(height: 15, color: Colors.black45),
+          child: Divider(
+            thickness: 2,
+            height: 15,
+            color: Color.fromRGBO(30, 136, 229, 0.781),
+          ),
         ),
         SizedBox(
           height: 300.0,
@@ -240,7 +256,14 @@ class Sehir extends StatelessWidget {
                           width: 200.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black,
+                                offset: Offset(0.0, 5.0),
+                                blurRadius: 7.0,
+                              ),
+                            ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -269,11 +292,11 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
-                              color: Colors.black26,
-                              offset: Offset(0.0, 2.0),
-                              blurRadius: 6.0,
+                              color: Colors.black,
+                              offset: Offset(0.0, 5.0),
+                              blurRadius: 7.0,
                             ),
                           ],
                         ),
@@ -365,7 +388,11 @@ class Sehir extends StatelessWidget {
         ),
         const SizedBox(
           width: 500,
-          child: Divider(height: 15, color: Colors.black45),
+          child: Divider(
+            thickness: 2,
+            height: 15,
+            color: Color.fromRGBO(30, 136, 229, 0.781),
+          ),
         ),
         SizedBox(
           height: 300.0,
@@ -397,7 +424,14 @@ class Sehir extends StatelessWidget {
                           width: 200.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black,
+                                offset: Offset(0.0, 5.0),
+                                blurRadius: 7.0,
+                              ),
+                            ],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -426,11 +460,11 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: const [
+                          boxShadow: [
                             BoxShadow(
-                              color: Colors.black26,
-                              offset: Offset(0.0, 2.0),
-                              blurRadius: 6.0,
+                              color: Colors.black,
+                              offset: Offset(0.0, 5.0),
+                              blurRadius: 7.0,
                             ),
                           ],
                         ),

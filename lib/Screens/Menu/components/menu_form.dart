@@ -20,7 +20,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://cdn.yemek.com/mnresize/940/940/uploads/2015/05/omlet-yemekcom.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Çırpılmış yumurta",
       "category": "kahvalti",
-      "puan": 3
+      "puan": 3,
+      "favori": false
     },
     {
       "food_name": "Menemen",
@@ -28,7 +29,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://www.altunmarket.com/app/assets/home/img/blog/menemen-min.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Domates, biber ve yumurta",
       "category": "kahvalti",
-      "puan": 2
+      "puan": 2,
+      "favori": false
     },
     {
       "food_name": "Haşlanmış Yumurta",
@@ -36,7 +38,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://1.bp.blogspot.com/-Cd3H95VpSpk/Xi_5PhJG8mI/AAAAAAAAAk8/Yov6A_DG8hMtoSzCtSP5ZSIhNzgQT1hvwCLcBGAsYHQ/s1600/haslanmis-yumurta-nekadardayanir.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "6-10 dakika haşlanmış yumurta",
       "category": "kahvalti",
-      "puan": 4
+      "puan": 4,
+      "favori": false
     },
     {
       "food_name": "Pankek",
@@ -44,7 +47,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://i4.hurimg.com/i/hurriyet/75/750x422/5efc60a70f25431554874f87.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Tazecik pankekler",
       "category": "kahvalti",
-      "puan": 5
+      "puan": 5,
+      "favori": false
     },
     // {
     //   "food_name": "Krep",
@@ -61,7 +65,8 @@ class _MenuFormState extends State<MenuForm> {
       "food_detail":
           "Krema eklemeli penne makarna", //"https://randomuser.me/api/portraits/men/35.jpg",
       "category": "ogleYemegi",
-      "puan": 3
+      "puan": 3,
+      "favori": false
     },
     {
       "food_name": "Hotdog",
@@ -70,7 +75,8 @@ class _MenuFormState extends State<MenuForm> {
       "food_detail":
           "Hardal soslu sosisli sandviç", //"https://randomuser.me/api/portraits/men/35.jpg",
       "category": "ogleYemegi",
-      "puan": 4
+      "puan": 4,
+      "favori": false
     },
     {
       "food_name": "Hamburger",
@@ -78,7 +84,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/05/hamburger-yemekcom.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Tavuk veya etli",
       "category": "ogleYemegi",
-      "puan": 5
+      "puan": 5,
+      "favori": false
     },
     // {
     //   "food_name": "Börek",
@@ -106,7 +113,8 @@ class _MenuFormState extends State<MenuForm> {
           "https://iasbh.tmgrup.com.tr/040972/800/420/0/136/1152/740?u=https://isbh.tmgrup.com.tr/sbh/2020/03/05/en-harika-adana-kebap-tarifi-adana-kebap-nasil-yapilir-1583404717106.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Adana yöresine özgü acı kebap",
       "category": "ogleYemegi",
-      "puan": 5
+      "puan": 5,
+      "favori": false
     },
     // {
     //   "food_name": "Tavuk",
@@ -133,6 +141,8 @@ class _MenuFormState extends State<MenuForm> {
     //   "category": "ogleYemegi",
     // }
   ];
+
+  bool isFavori = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -280,16 +290,20 @@ class _MenuFormState extends State<MenuForm> {
                                                 ]),
                                             child: Center(
                                               child: IconButton(
-                                                icon: const Icon(
-                                                    Icons.favorite_outline),
+                                                icon: menu_['favori']
+                                                    ? Icon(Icons.favorite)
+                                                    : Icon(
+                                                        Icons.favorite_border),
                                                 color: kPrimaryColor,
                                                 onPressed: () {
                                                   setState(() {
+                                                    menu_['favori'] =
+                                                        !menu_['favori'];
                                                     Fluttertoast.showToast(
                                                         toastLength:
                                                             Toast.LENGTH_LONG,
                                                         msg:
-                                                            "Favorilere eklendi",
+                                                            "${menu_['food_name']} favorilere eklendi",
                                                         gravity:
                                                             ToastGravity.BOTTOM,
                                                         backgroundColor:
@@ -310,55 +324,56 @@ class _MenuFormState extends State<MenuForm> {
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
                               child: Container(
-                                width: 150,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 1),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            menu_['food_name'],
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text(
-                                            menu_['food_detail'],
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
+                                      child: Flexible(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              menu_['food_name'],
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                              SizedBox(
-                                                width: 10,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              menu_['food_detail'],
+                                              style: TextStyle(
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
-                                        ],
+                                            ),
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: <Widget>[
+                                                Icon(
+                                                  Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 20,
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                // Text(favoriDoctors[index]
+                                                //         ['yildizOrtalamasi']
+                                                //     .toString()),
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -455,16 +470,20 @@ class _MenuFormState extends State<MenuForm> {
                                                 ]),
                                             child: Center(
                                               child: IconButton(
-                                                icon: const Icon(
-                                                    Icons.favorite_outline),
+                                                icon: menu_['favori']
+                                                    ? Icon(Icons.favorite)
+                                                    : Icon(
+                                                        Icons.favorite_border),
                                                 color: kPrimaryColor,
                                                 onPressed: () {
                                                   setState(() {
+                                                    menu_['favori'] =
+                                                        !menu_['favori'];
                                                     Fluttertoast.showToast(
                                                         toastLength:
                                                             Toast.LENGTH_LONG,
                                                         msg:
-                                                            "Favorilere eklendi",
+                                                            "${menu_['food_name']} favorilere eklendi",
                                                         gravity:
                                                             ToastGravity.BOTTOM,
                                                         backgroundColor:
@@ -485,55 +504,56 @@ class _MenuFormState extends State<MenuForm> {
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
                               child: Container(
-                                width: 150,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 1),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            menu_['food_name'],
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text(
-                                            menu_['food_detail'],
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
+                                      child: Flexible(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              menu_['food_name'],
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                              SizedBox(
-                                                width: 10,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              menu_['food_detail'],
+                                              style: TextStyle(
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
-                                        ],
+                                            ),
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: <Widget>[
+                                                Icon(
+                                                  Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 20,
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                // Text(favoriDoctors[index]
+                                                //         ['yildizOrtalamasi']
+                                                //     .toString()),
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -630,16 +650,20 @@ class _MenuFormState extends State<MenuForm> {
                                                 ]),
                                             child: Center(
                                               child: IconButton(
-                                                icon: const Icon(
-                                                    Icons.favorite_outline),
+                                                icon: menu_['favori']
+                                                    ? Icon(Icons.favorite)
+                                                    : Icon(
+                                                        Icons.favorite_border),
                                                 color: kPrimaryColor,
                                                 onPressed: () {
                                                   setState(() {
+                                                    menu_['favori'] =
+                                                        !menu_['favori'];
                                                     Fluttertoast.showToast(
                                                         toastLength:
                                                             Toast.LENGTH_LONG,
                                                         msg:
-                                                            "Favorilere eklendi",
+                                                            "${menu_['food_name']} favorilere eklendi",
                                                         gravity:
                                                             ToastGravity.BOTTOM,
                                                         backgroundColor:
@@ -660,52 +684,53 @@ class _MenuFormState extends State<MenuForm> {
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
                               child: Container(
-                                width: 150,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          menu_['food_name'],
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Text(
-                                          menu_['food_detail'],
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.yellow,
-                                              size: 20,
+                                    Flexible(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            menu_['food_name'],
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w500,
                                             ),
-                                            SizedBox(
-                                              width: 10,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text(
+                                            menu_['food_detail'],
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w500,
                                             ),
-                                            // Text(favoriDoctors[index]
-                                            //         ['yildizOrtalamasi']
-                                            //     .toString()),
-                                          ],
-                                        )
-                                      ],
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceAround,
+                                            children: <Widget>[
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.yellow,
+                                                size: 20,
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              // Text(favoriDoctors[index]
+                                              //         ['yildizOrtalamasi']
+                                              //     .toString()),
+                                            ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),

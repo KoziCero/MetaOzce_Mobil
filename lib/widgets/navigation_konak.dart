@@ -1,11 +1,14 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:meta_ozce_0/Screens/AnaEkran/ana_ekran.dart';
 import 'package:meta_ozce_0/Screens/Otel_Konaklayan/home_screen_konak.dart';
 import 'package:meta_ozce_0/Screens/Otel_Konaklayan/robot_page_konaklayan.dart';
 import 'package:meta_ozce_0/Screens/Profil/profil_page.dart';
 import 'package:meta_ozce_0/const/constant.dart';
+import 'package:meta_ozce_0/pages/Konaklayan/Main/components/main_form.dart';
+import 'package:meta_ozce_0/pages/Konaklayan/Main/main_screen.dart';
 import 'package:meta_ozce_0/widgets/change_thema.dart';
+
+import '../Screens/AnaEkran/ana_ekran.dart';
 
 class NavigationKonak extends StatefulWidget {
   int index;
@@ -41,7 +44,7 @@ class _NavigationKonakState extends State<NavigationKonak> {
             ),
             Image(
               image: AssetImage('assets/images/rob1.png'),
-              height: 65,
+              height: 35,
             ),
             Icon(
               Icons.person,

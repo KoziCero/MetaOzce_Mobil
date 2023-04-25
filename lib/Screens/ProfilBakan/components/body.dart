@@ -1,46 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:meta_ozce_0/Screens/Profil/components/profile_menu.dart';
-import 'package:meta_ozce_0/Screens/Profil/components/profile_pic.dart';
+import 'package:meta_ozce_0/Screens/ProfilBakan/components/profile_menu.dart';
+import 'package:meta_ozce_0/Screens/ProfilBakan/components/profile_pic.dart';
 
 import '../../../const/background.dart';
 import '../../Otel_Konaklayan/feedback_page.dart';
+import '../../Otel_Konaklayan/feedback_page_bakan.dart';
 import '../../Welcome/welcome_screen.dart';
 
-class Body extends StatelessWidget {
+class BodyBakan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Background(
-      title: 'PROFIL',
+      title: "PROFIL",
       child: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
-            ProfilePic(),
+            ProfilePicBakan(),
             SizedBox(height: 20),
-            ProfileMenu(
+            ProfileMenuBakan(
               text: "Hesap",
               icon: Icon(
                 Icons.person,
               ),
               press: () => {},
             ),
-            ProfileMenu(
+            ProfileMenuBakan(
               text: "Bildirimler",
               icon: Icon(Icons.notifications),
               press: () {},
             ),
-            ProfileMenu(
+            ProfileMenuBakan(
               text: "Ayarlar",
               icon: Icon(Icons.settings),
               press: () {},
             ),
-            ProfileMenu(
+            ProfileMenuBakan(
               text: "Geri Dönüş",
               icon: Icon(Icons.feedback),
               press: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FeedbackKonak())),
+                  MaterialPageRoute(builder: (context) => FeedbackBakan())),
             ),
-            ProfileMenu(
+            ProfileMenuBakan(
               text: "Çıkış Yap",
               icon: Icon(Icons.logout),
               press: () => Navigator.push(context,

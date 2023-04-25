@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class FeedbackKonak extends StatefulWidget {
+class FeedbackBakan extends StatefulWidget {
   // const MyWidget({Key? key}) : super(key: key);
   static const routeName = 'feedbackpage';
 
   @override
-  State<FeedbackKonak> createState() => _FeedbackKonakState();
+  State<FeedbackBakan> createState() => _FeedbackBakanState();
 }
 
-class _FeedbackKonakState extends State<FeedbackKonak> {
+class _FeedbackBakanState extends State<FeedbackBakan> {
   final _formKey = GlobalKey<FormState>();
   late final _firestore = FirebaseFirestore.instance;
   final firstController = TextEditingController();
@@ -54,55 +54,6 @@ class _FeedbackKonakState extends State<FeedbackKonak> {
                 children: [
                   const SizedBox(
                     height: 30,
-                  ),
-                  commentToOtel(),
-                  Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: RatingBar.builder(
-                      initialRating: 0,
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        switch (index) {
-                          case 0:
-                            return const Icon(
-                              Icons.sentiment_very_dissatisfied,
-                              color: Colors.red,
-                            );
-                          case 1:
-                            return const Icon(
-                              Icons.sentiment_dissatisfied,
-                              color: Colors.redAccent,
-                            );
-                          case 2:
-                            return const Icon(
-                              Icons.sentiment_neutral,
-                              color: Colors.amber,
-                            );
-                          case 3:
-                            return const Icon(
-                              Icons.sentiment_satisfied,
-                              color: Colors.lightGreen,
-                            );
-                          case 4:
-                            return const Icon(
-                              Icons.sentiment_very_satisfied,
-                              color: Colors.green,
-                            );
-                          default:
-                            return const Icon(
-                              Icons.sentiment_very_satisfied,
-                              color: Colors.green,
-                            );
-                        }
-                      },
-                      onRatingUpdate: (rates) {
-                        otelPuan = rates;
-                        setState(() {});
-                      },
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 80,
                   ),
                   commentToMobil(),
                   Padding(
@@ -157,7 +108,7 @@ class _FeedbackKonakState extends State<FeedbackKonak> {
                     onPressed: () {
                       final isValid = _formKey.currentState!.validate();
 
-                      isValid && otelPuan != 0 && uygulamaPuan != 0
+                      isValid && uygulamaPuan != 0
                           ? {
                               hotelsRef.add({
                                 'mobil': mobilYorumu,
@@ -193,30 +144,6 @@ class _FeedbackKonakState extends State<FeedbackKonak> {
       ]),
     );
   }
-
-  Widget commentToOtel() => TextFormField(
-        maxLines: 3,
-        decoration: InputDecoration(
-          labelText: 'Otel hakkında geri bildirim',
-          hintText: 'Otel hakkında geri bildirim',
-          icon: Icon(Icons.mode_comment),
-          fillColor: Colors.white,
-          border: OutlineInputBorder(),
-        ),
-        validator: (value) {
-          if (value!.isEmpty) {
-            return "Boş olamaz.";
-          } else {
-            return null;
-          }
-        },
-        maxLength: 150,
-        onChanged: (value) {
-          setState(() {
-            otelYorumu = value;
-          });
-        },
-      );
 
   Widget commentToMobil() => TextFormField(
         maxLines: 3,

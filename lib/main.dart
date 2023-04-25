@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:meta_ozce_0/Screens/Login/login_screen.dart';
+import 'package:meta_ozce_0/Screens/Menu/menu_screen.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/favoriler_page.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/home_screen_bakan.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/otel_detail_page.dart';
@@ -9,6 +12,7 @@ import 'package:meta_ozce_0/Screens/Welcome/welcome_screen.dart';
 import 'package:meta_ozce_0/Screens/WelcomeRobot/welcome_screen_robot.dart';
 import 'package:meta_ozce_0/components/provider.dart';
 import 'package:meta_ozce_0/constants.dart';
+import 'package:meta_ozce_0/pages/Konaklayan/Main/main_screen.dart';
 
 import 'package:meta_ozce_0/widgets/navigation_bakan1.dart';
 import 'package:meta_ozce_0/widgets/navigation_konak.dart';
@@ -28,7 +32,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Meta OzCe',
-      theme: MyThemes.lightTheme,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       darkTheme: MyThemes.darkTheme,
       home: FutureBuilder(
         future: _initialization,
@@ -38,7 +47,7 @@ class MyApp extends StatelessWidget {
               child: Text('beklenmeyen hata'),
             );
           } else if (asyncSnapshot.hasData) {
-            return WelcomeScreen();
+            return WelcomeScreenRobot();
           } else {
             return Center(
               child: CircularProgressIndicator(),

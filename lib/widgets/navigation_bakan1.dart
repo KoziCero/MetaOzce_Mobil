@@ -5,6 +5,8 @@ import 'package:meta_ozce_0/Screens/Otel_Bakan/home_screen_bakan.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/robot_page.dart';
 import 'package:meta_ozce_0/Screens/Profil/profil_page.dart';
 
+import '../Screens/ProfilBakan/profil_page.dart';
+
 class NavigationBakan1 extends StatefulWidget {
   int index;
   NavigationBakan1({this.index = 0});
@@ -19,16 +21,11 @@ class _NavigationBakan1State extends State<NavigationBakan1> {
     HomeScreenBakan(),
     FavPage(),
     RobotPageBakan(),
-    ProfileScreen(),
+    ProfileScreenBakan(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('META OZCE'),
-        centerTitle: true,
-        backgroundColor: Colors.blue.shade600,
-      ),
       body: screens[widget.index],
       bottomNavigationBar: CurvedNavigationBar(
           index: widget.index,
@@ -48,7 +45,10 @@ class _NavigationBakan1State extends State<NavigationBakan1> {
               color: Colors.white,
             ),
             Image(
-              image: AssetImage('assets/images/rob1.png'),
+              image: AssetImage(
+                'assets/images/rob1.png',
+              ),
+              width: 30,
               height: 65,
             ),
             Icon(

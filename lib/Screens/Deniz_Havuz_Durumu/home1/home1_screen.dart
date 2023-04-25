@@ -6,10 +6,6 @@ class Home1Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      appBar: AppBar(
-        title: Text('META OZCE'),
-        centerTitle: true,
-      ),
       body: Body(),
     );
   }

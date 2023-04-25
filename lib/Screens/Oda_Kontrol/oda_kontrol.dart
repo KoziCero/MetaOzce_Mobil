@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import '../../const/background.dart';
+
 class OdaKontrol extends StatefulWidget {
   OdaKontrol({Key? key}) : super(key: key);
 
@@ -15,13 +17,9 @@ class _OdaKontrolState extends State<OdaKontrol> {
   bool flagOdayaHizmet = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      appBar: AppBar(
-        title: Text('META OZCE'),
-        centerTitle: true,
-      ),
-      body: SafeArea(
+    return Background(
+      title: 'ODA KONTROL',
+      child: SafeArea(
         child: Container(
           margin: const EdgeInsets.only(top: 18, left: 24, right: 24),
           child: Column(
@@ -55,10 +53,9 @@ class _OdaKontrolState extends State<OdaKontrol> {
                     const SizedBox(height: 16),
                     const Center(
                       child: Text(
-                        '1442 Numaralı Oda Kontrolü',
+                        '0001 Numaralı Oda Kontrolü',
                         style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -77,15 +74,16 @@ class _OdaKontrolState extends State<OdaKontrol> {
                         _cardMenu(
                           onTap: () {
                             setState(() {
+                              !flagElektrik
+                                  ? Fluttertoast.showToast(
+                                      toastLength: Toast.LENGTH_LONG,
+                                      msg:
+                                          "Elektrik kontrolü için odanıza personel gönderilmiştir.",
+                                      gravity: ToastGravity.BOTTOM,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 44, 201, 193))
+                                  : null;
                               flagElektrik = true;
-
-                              Fluttertoast.showToast(
-                                  toastLength: Toast.LENGTH_LONG,
-                                  msg:
-                                      "Elektrik kontrolü için odanıza personel gönderilmiştir.",
-                                  gravity: ToastGravity.BOTTOM,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 44, 201, 193));
                             });
 
                             // Navigator.push(
@@ -105,14 +103,17 @@ class _OdaKontrolState extends State<OdaKontrol> {
                         _cardMenu(
                           onTap: () {
                             setState(() {
+                              !flagKlima
+                                  ? Fluttertoast.showToast(
+                                      toastLength: Toast.LENGTH_LONG,
+                                      msg:
+                                          "Klima kontrolü için odanıza personel gönderilmiştir.",
+                                      gravity: ToastGravity.BOTTOM,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 44, 201, 193))
+                                  : null;
+
                               flagKlima = true;
-                              Fluttertoast.showToast(
-                                  toastLength: Toast.LENGTH_LONG,
-                                  msg:
-                                      "Klima kontrolü için odanıza personel gönderilmiştir.",
-                                  gravity: ToastGravity.BOTTOM,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 44, 201, 193));
                             });
 
                             // Navigator.push(
@@ -138,14 +139,16 @@ class _OdaKontrolState extends State<OdaKontrol> {
                         _cardMenu(
                           onTap: () {
                             setState(() {
+                              !flagTemizlik
+                                  ? Fluttertoast.showToast(
+                                      toastLength: Toast.LENGTH_LONG,
+                                      msg:
+                                          "Temizlik yapılması için odanıza personel gönderilmiştir.",
+                                      gravity: ToastGravity.BOTTOM,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 44, 201, 193))
+                                  : null;
                               flagTemizlik = true;
-                              Fluttertoast.showToast(
-                                  toastLength: Toast.LENGTH_LONG,
-                                  msg:
-                                      "Temizlik yapılması için odanıza personel gönderilmiştir.",
-                                  gravity: ToastGravity.BOTTOM,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 44, 201, 193));
                             });
 
                             // Navigator.push(
@@ -164,14 +167,16 @@ class _OdaKontrolState extends State<OdaKontrol> {
                         ),
                         _cardMenu(
                           onTap: () {
-                            Fluttertoast.showToast(//todo çalışmıyor toastlar
-                                toastLength: Toast.LENGTH_LONG,
-                                msg:
-                                    "Oda hizmeti sağlanması için personel gönderilmiştir.",
-                                gravity: ToastGravity.BOTTOM,
-                                backgroundColor:
-                                    Color.fromARGB(255, 44, 201, 193));
                             setState(() {
+                              !flagOdayaHizmet
+                                  ? Fluttertoast.showToast(
+                                      toastLength: Toast.LENGTH_LONG,
+                                      msg:
+                                          "Oda hizmeti sağlanması için odanıza personel gönderilmiştir.",
+                                      gravity: ToastGravity.BOTTOM,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 44, 201, 193))
+                                  : null;
                               flagOdayaHizmet = true;
                             });
 

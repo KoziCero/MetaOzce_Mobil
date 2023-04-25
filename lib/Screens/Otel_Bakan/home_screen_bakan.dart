@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:meta_ozce_0/widgets/sehir_crousel.dart';
 
+import '../../const/background.dart';
+
 class HomeScreenBakan extends StatefulWidget {
   @override
   _HomeScreenBakanState createState() => _HomeScreenBakanState();
@@ -19,9 +21,9 @@ class _HomeScreenBakanState extends State<HomeScreenBakan> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      body: SafeArea(
+    return Background(
+      title: 'ANA SAYFA',
+      child: SafeArea(
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 30.0),
           children: <Widget>[

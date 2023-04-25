@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:meta_ozce_0/widgets/navigation_bakan1.dart';
+
+import '../../const/background.dart';
 
 class RobotPageBakan extends StatefulWidget {
   @override
@@ -9,10 +12,56 @@ class RobotPageBakan extends StatefulWidget {
 class _RobotPageBakanState extends State<RobotPageBakan> {
   final int _selectedIndex = 0;
 
+  String soru = "";
+  List<String> homePage = [
+    'oteller',
+    'farklı oteller',
+    'şehir',
+    'detaylı bakmak'
+  ];
+  bool fikrimYok = true;
+  findSolution() {
+    for (int i = 0; i < homePage.length; i++) {
+      if (soru.contains(homePage[i])) {
+        print("a");
+        fikrimYok = false;
+      }
+    }
+    if (fikrimYok == false) {
+      showDialog(
+          context: context,
+          builder: (context) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          });
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return NavigationBakan1(
+              index: 0,
+            );
+          },
+        ),
+      );
+    } else {
+      // int i = 0;
+      // print(soru.contains(homePage[i]));
+      Fluttertoast.showToast(
+          toastLength: Toast.LENGTH_LONG,
+          msg: "Konu hakkında bilgim yok.",
+          gravity: ToastGravity.BOTTOM,
+          backgroundColor: Color.fromARGB(255, 44, 201, 193));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+    return Background(
+      title: 'DIGOT',
+      child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,7 +82,6 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                       'assets/images/rob1.png',
                     ),
                   ),
-                  border: Border.all(color: Colors.black12, width: 3),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
@@ -61,7 +109,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 endIndent: 10,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.40,
+                height: MediaQuery.of(context).size.height * 0.45,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -377,21 +425,46 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                   ),
                 ),
               ),
-
               Align(
                 alignment: Alignment.bottomCenter,
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: 'Başka bir sorum var.',
-                    ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        child: TextField(
+                          onChanged: (value) {
+                            setState(() {
+                              soru = value;
+                            });
+                          },
+                          decoration: InputDecoration(
+                            hintStyle: TextStyle(
+                              fontSize: 11,
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            hintText: 'Başka bir sorum var...',
+                          ),
+                        ),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              findSolution();
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          )),
+                          child: Text("Sor"))
+                    ],
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 50,
               ),
             ],
           ),
