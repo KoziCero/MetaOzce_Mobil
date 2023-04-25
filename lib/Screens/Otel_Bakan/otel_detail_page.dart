@@ -39,141 +39,149 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
               children: [
                 Expanded(
                   child: Container(
-                    width: double.maxFinite,
-                    height: 240, //bunu expanded yapsam iyi olur
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('${widget.otel_.imageUrl}'),
-                          fit: BoxFit.cover),
+                    child: Image.network(
+                      '${widget.otel_.imageUrl}',
+                      fit: BoxFit.cover,
                     ),
+
+                    height: 240, //bunu expanded yapsam iyi olur
                   ),
                 ),
-                Positioned(
-                  top: 210,
-                  child: Container(
-                    padding:
-                        const EdgeInsets.only(left: 20, right: 20, top: 30),
-                    width: MediaQuery.of(context).size.width,
-                    height: 790,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30),
+                Column(
+                  children: [
+                    Positioned(
+                      top: 210,
+                      child: Container(
+                        padding:
+                            const EdgeInsets.only(left: 20, right: 20, top: 30),
+                        width: MediaQuery.of(context).size.width,
+                        height: 790,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                          ),
+                        ),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  AppLargeText(
+                                    text: '${widget.otel_.name}',
+                                    color: Colors.black.withOpacity(0.8),
+                                  ),
+                                  AppColorText(
+                                    text: '${widget.otel_.price}',
+                                    size: 15,
+                                  )
+                                ],
+                              ),
+                              const SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  Icon(Icons.location_on,
+                                      color: Theme.of(context).primaryColor),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  AppText(
+                                      text:
+                                          '${widget.otel_.country}, ${widget.otel_.city}')
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Row(
+                                children: [
+                                  Wrap(
+                                    children: List.generate(
+                                      5,
+                                      (index) {
+                                        return Icon(
+                                          Icons.star,
+                                          color: index < gottenStars
+                                              ? Colors.yellow
+                                              : Colors.black12,
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  AppText(text: '(${widget.otel_.rating}.0)'),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 25,
+                              ),
+                              AppLargeText(
+                                  text: 'Kişiler',
+                                  color: Colors.black.withOpacity(0.8),
+                                  size: 20),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              AppText(text: 'Grubunuzdaki kişi sayısı'),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Wrap(
+                                children: List.generate(5, (index) {
+                                  return InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        selectedIndex = index;
+                                      });
+                                    },
+                                    child: Container(
+                                      margin: const EdgeInsets.only(right: 10),
+                                      child: AppButtons(
+                                        size: 50,
+                                        color: selectedIndex == index
+                                            ? Colors.white
+                                            : Colors.black,
+                                        backgroundColor: selectedIndex == index
+                                            ? Colors.black
+                                            : Colors.grey.shade200,
+                                        borderColor: selectedIndex == index
+                                            ? Colors.black
+                                            : Colors.grey.shade200,
+                                        text: "${(index + 1)}",
+                                      ),
+                                    ),
+                                  );
+                                }),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              AppLargeText(
+                                text: 'Açıklama',
+                                color: Colors.black.withOpacity(0.8),
+                                size: 20,
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              AppText(
+                                text: '${widget.otel_.aciklama}',
+                                size: 15,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            AppLargeText(
-                              text: '${widget.otel_.name}',
-                              color: Colors.black.withOpacity(0.8),
-                            ),
-                            AppColorText(
-                              text: '${widget.otel_.price}',
-                              size: 15,
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Icon(Icons.location_on,
-                                color: Theme.of(context).primaryColor),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            AppText(
-                                text:
-                                    '${widget.otel_.country}, ${widget.otel_.city}')
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          children: [
-                            Wrap(
-                              children: List.generate(
-                                5,
-                                (index) {
-                                  return Icon(
-                                    Icons.star,
-                                    color: index < gottenStars
-                                        ? Colors.yellow
-                                        : Colors.black12,
-                                  );
-                                },
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            AppText(text: '(${widget.otel_.rating}.0)'),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 25,
-                        ),
-                        AppLargeText(
-                            text: 'Kişiler',
-                            color: Colors.black.withOpacity(0.8),
-                            size: 20),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        AppText(text: 'Grubunuzdaki kişi sayısı'),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Wrap(
-                          children: List.generate(5, (index) {
-                            return InkWell(
-                              onTap: () {
-                                setState(() {
-                                  selectedIndex = index;
-                                });
-                              },
-                              child: Container(
-                                margin: const EdgeInsets.only(right: 10),
-                                child: AppButtons(
-                                  size: 50,
-                                  color: selectedIndex == index
-                                      ? Colors.white
-                                      : Colors.black,
-                                  backgroundColor: selectedIndex == index
-                                      ? Colors.black
-                                      : Colors.grey.shade200,
-                                  borderColor: selectedIndex == index
-                                      ? Colors.black
-                                      : Colors.grey.shade200,
-                                  text: "${(index + 1)}",
-                                ),
-                              ),
-                            );
-                          }),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        AppLargeText(
-                          text: 'Açıklama',
-                          color: Colors.black.withOpacity(0.8),
-                          size: 20,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        AppText(
-                          text: '${widget.otel_.aciklama}',
-                          size: 15,
-                        )
-                      ],
+                    SizedBox(
+                      height: 95,
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
@@ -209,7 +217,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                         }
                       : {
                           widget.otel_.flag = false,
-                          hotelsRef.doc(' ${widget.otel_.name}').delete(),
+                          hotelsRef.doc('${widget.otel_.name}').delete(),
                         };
                 },
               ),

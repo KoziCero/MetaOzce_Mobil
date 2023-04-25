@@ -4,10 +4,11 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:meta_ozce_0/Screens/Deniz_Havuz_Durumu/home/home_screen.dart';
 import 'package:meta_ozce_0/Screens/Etkinlikler/etkinlikler_screen.dart';
 import 'package:meta_ozce_0/Screens/Menu/menu_screen.dart';
-
+import 'package:meta_ozce_0/const/constant.dart';
 import 'package:meta_ozce_0/widgets/navigation_konak.dart';
 import 'dart:async';
 import '../../const/background.dart';
+import '../Profil/profil_page.dart';
 
 class RobotPageKonak extends StatefulWidget {
   @override
@@ -139,8 +140,28 @@ List<String> denizHavuzPage = [
   "denizde kano-kayak yapabilir miyim",
   "havuzda çocuk oyun alanı var mı"
 ];
+List<String> profilePage = [
+  'profil',
+  'sayfa',
+  'kullanıcı adı',
+  'fotoğraf',
+  'durum',
+  'hakkında',
+  'kullanıcı bilgileri',
+  'gizlilik',
+  'ayarlar',
+  'profil',
+  'sayfa',
+  'kullanici adi',
+  'fotograf',
+  'durum',
+  'hakkinda',
+  'kullanici bilgileri',
+  'gizlilik',
+  'ayarlar'
+];
 int counter = 0;
-
+bool fikrimYokProfil = true;
 bool fikrimYokMenu = true;
 bool fikrimYokEtkinlik = true;
 bool fikrimYokDenizHavuz = true;
@@ -153,6 +174,7 @@ class _RobotPageKonakState extends State<RobotPageKonak> {
     fikrimYokMenu = true;
     fikrimYokDenizHavuz = true;
     fikrimYokEtkinlik = true;
+    fikrimYokProfil = true;
     counter = 0;
 
     //menu için
@@ -187,14 +209,51 @@ class _RobotPageKonakState extends State<RobotPageKonak> {
               builder: (context) {
                 return Center(
                   child: SpinKitCubeGrid(
-                    color: Colors.amber,
+                    color: myColor1,
                   ),
                 );
               });
         }
       });
     }
-
+    //profilePage için
+    for (int i = 0; i < profilePage.length; i++) {
+      if (soru.contains(profilePage[i])) {
+        print("etkinlik var");
+        fikrimYokProfil =
+            false; // Eğer soru, bir menü sayfasının adını içeriyorsa, "fikrimYok" değişkeni "false" yapılır.
+      }
+    }
+    if (fikrimYokProfil == false) {
+      Timer.periodic(Duration(seconds: 1), (timer) {
+        setState(() {
+          counter++;
+          if (counter >= 3) {
+            timer.cancel();
+            Navigator.of(context).pop();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ProfileScreen();
+                },
+              ),
+            );
+          }
+        });
+        if (counter < 3) {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return Center(
+                  child: SpinKitCubeGrid(
+                    color: myColor1,
+                  ),
+                );
+              });
+        }
+      });
+    }
     //etkinlik için
     for (int i = 0; i < etkinlikPage.length; i++) {
       if (soru.contains(etkinlikPage[i])) {
@@ -226,7 +285,7 @@ class _RobotPageKonakState extends State<RobotPageKonak> {
               builder: (context) {
                 return Center(
                   child: SpinKitCubeGrid(
-                    color: Colors.amber,
+                    color: myColor1,
                   ),
                 );
               });
@@ -421,7 +480,7 @@ class _RobotPageKonakState extends State<RobotPageKonak> {
               builder: (context) {
                 return Center(
                   child: SpinKitCubeGrid(
-                    color: Colors.amber,
+                    color: myColor1,
                   ),
                 );
               });

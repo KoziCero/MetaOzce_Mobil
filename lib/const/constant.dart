@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+//dsadşlsaşidlşais
 const myColorBack = Color.fromARGB(255, 39, 187, 255);
+
 const myColor = Color.fromRGBO(30, 136, 229, 1);
-const kPrimaryColor = Color(0xFF0067a6);
+const myColor1 = Color.fromRGBO(30, 136, 229, 1);
 const kPrimaryLightColor = Color.fromARGB(255, 130, 212, 253);
 var kPrimaryLight2Color = Colors.deepPurple[100];
 const kPrimaryBackLightColor = Colors.white70;

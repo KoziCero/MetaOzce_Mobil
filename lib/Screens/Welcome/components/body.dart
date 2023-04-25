@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Screens/QrCode/qrCode_screen.dart';
 import 'package:meta_ozce_0/Screens/Welcome/components/background.dart';
-import 'package:meta_ozce_0/constants.dart';
+import 'package:meta_ozce_0/const/constant.dart';
+
 import 'package:meta_ozce_0/widgets/navigation_bakan1.dart';
 
 import '../../../components/rounded_button.dart';
@@ -22,9 +23,7 @@ class Body extends StatelessWidget {
             const Text(
               "METAOZCE'YE HOŞ GELDİNİZ",
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                  color: kPrimaryColor),
+                  fontWeight: FontWeight.bold, fontSize: 25, color: myColor1),
             ),
             SizedBox(height: size.height * 0.03),
             Image.asset(

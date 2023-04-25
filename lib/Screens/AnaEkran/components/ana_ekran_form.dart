@@ -18,32 +18,32 @@ class AnaEkranForm extends StatefulWidget {
 class _AnaEkranFormState extends State<AnaEkranForm> {
   List<dynamic> medCat = [
     {
-      "name": "Ceren",
+      "name": "Metin Korkmaz",
       "image": "https://randomuser.me/api/portraits/men/19.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "Yeşim Yenil",
+      "image": "https://randomuser.me/api/portraits/women/59.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "John Ken",
+      "image": "https://randomuser.me/api/portraits/men/59.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "Melike Aytürk",
+      "image": "https://randomuser.me/api/portraits/women/63.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "Halit Yıldız",
+      "image": "https://randomuser.me/api/portraits/men/44.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "Betül Altın",
+      "image": "https://randomuser.me/api/portraits/women/76.jpg"
     },
     {
-      "name": "Ceren",
-      "image": "https://randomuser.me/api/portraits/men/19.jpg"
+      "name": "Zehra Yılmaz",
+      "image": "https://randomuser.me/api/portraits/women/58.jpg"
     },
   ];
   @override
@@ -196,7 +196,7 @@ class _AnaEkranFormState extends State<AnaEkranForm> {
                       "Yardımcı olabileceğim içerikler",
                       style: TextStyle(
                           fontSize: 16,
-                          color: kPrimaryColor,
+                          color: myColor1,
                           fontWeight: FontWeight.bold),
                     ),
                   ],

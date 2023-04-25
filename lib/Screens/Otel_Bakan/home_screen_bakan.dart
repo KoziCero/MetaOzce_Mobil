@@ -38,18 +38,24 @@ class _HomeScreenBakanState extends State<HomeScreenBakan> {
             //       .toList(),
             // ),
 
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0),
-              child: Text(
-                'Sana en uygun oteli keşfet!',
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue[100],
+                    borderRadius: BorderRadius.circular(12)),
+                child: TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.blue,
+                      ),
+                      border: InputBorder.none,
+                      hintText: "Sana en uygun oteli keşfet!"),
                 ),
               ),
             ),
-            const SizedBox(height: 20.0),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 35.0),
             Sehir(),
             const SizedBox(height: 20.0),
           ],

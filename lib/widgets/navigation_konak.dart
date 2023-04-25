@@ -31,8 +31,8 @@ class _NavigationKonakState extends State<NavigationKonak> {
       body: screens[widget.index],
       bottomNavigationBar: CurvedNavigationBar(
           index: widget.index,
-          backgroundColor: myColorBack,
-          color: myColor,
+          backgroundColor: Color(0XFFbac9e1),
+          color: myColor1,
           animationDuration: Duration(milliseconds: 300),
           onTap: (index) => setState(() {
                 widget.index = index;

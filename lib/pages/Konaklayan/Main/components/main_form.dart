@@ -99,7 +99,7 @@ class _MainFormState extends State<MainForm> {
 
                       Container(
                         decoration: BoxDecoration(
-                          border: Border.all(color: myColor, width: 3),
+                          border: Border.all(color: myColor1, width: 3),
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(22.0),
                           boxShadow: [
@@ -247,8 +247,7 @@ class _MainFormState extends State<MainForm> {
                                                               ["category"],
                                                           style: TextStyle(
                                                               fontSize: 15,
-                                                              color:
-                                                                  kPrimaryColor),
+                                                              color: myColor1),
                                                           textAlign:
                                                               TextAlign.center),
                                                     ],

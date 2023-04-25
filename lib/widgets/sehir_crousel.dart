@@ -137,11 +137,10 @@ class Sehir extends StatelessWidget {
                               tag: '${sehir_.oteller}',
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
-                                child: Image(
+                                child: Image.network(
+                                  '${sehirler[0].oteller?[index].imageUrl}',
                                   height: 180.0,
                                   width: 180.0,
-                                  image: AssetImage(
-                                      '${sehirler[0].oteller?[index].imageUrl}'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -306,11 +305,10 @@ class Sehir extends StatelessWidget {
                               tag: '${sehir_.oteller}',
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
-                                child: Image(
+                                child: Image.network(
+                                  '${sehirler[1].oteller?[index].imageUrl}',
                                   height: 180.0,
                                   width: 180.0,
-                                  image: AssetImage(
-                                      '${sehirler[1].oteller?[index].imageUrl}'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -474,11 +472,10 @@ class Sehir extends StatelessWidget {
                               tag: '${sehir_.oteller}',
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
-                                child: Image(
+                                child: Image.network(
+                                  '${sehirler[2].oteller![index].imageUrl}',
                                   height: 180.0,
                                   width: 180.0,
-                                  image: AssetImage(
-                                      '${sehirler[2].oteller![index].imageUrl}'),
                                   fit: BoxFit.cover,
                                 ),
                               ),

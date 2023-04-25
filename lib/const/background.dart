@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/const/constant.dart';
 
-import '../constants.dart';
-
 class Background extends StatelessWidget {
   final Widget child;
   final String? title;
@@ -25,7 +23,7 @@ class Background extends StatelessWidget {
           '${title}',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: myColor,
+        backgroundColor: myColor1,
       ),
       // bottomNavigationBar:
       resizeToAvoidBottomInset: false,

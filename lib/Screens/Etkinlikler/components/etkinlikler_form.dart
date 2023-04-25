@@ -17,7 +17,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
     {
       "etkinlik_name": "Pilates",
       "etkinlik_image":
-          "https://brtk.net/wp-content/uploads/2023/03/04/daupilates.jpg?ver=0e7caf909d5839bca58b9c15acee7c82", //"https://randomuser.me/api/portraits/men/35.jpg",
+          "https://i4.hurimg.com/i/hurriyet/75/750x422/5d8db3250f254415c8b240ff.jpg",
       "etkinlik_detail": "Grup pilatesi",
       "category": "sabah",
       "yer": "1",
@@ -49,61 +49,85 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
           "https://www.gercekalanya.com/images/haberler/19725.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
       "etkinlik_detail": "Havuzda köpük partisi",
       "category": "oglenEtkinlikleri",
-      "yer": "1",
+      "yer": "Büyük Havuz",
       "etkinlik_saat": "12:30"
     },
-    // {
-    //   "food_name": "Börek",
-    //   "food_image":
-    //       "https://generatorfun.com/code/uploads/Random-Food-image-12.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // },
-    // {
-    //   "food_name": "Hamburger",
-    //   "food_image":
-    //       "https://generatorfun.com/code/uploads/Random-Food-image-7.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // },
-    // {
-    //   "food_name": "Patates Haşlaması",
-    //   "food_image":
-    //       "https://randomuser.me/api/portraits/men/32.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // }
-  ];
-  List<dynamic> menu_aksamYemegi = [
     {
-      "food_name": "Adana Kebap",
-      "food_image":
-          "https://iasbh.tmgrup.com.tr/040972/800/420/0/136/1152/740?u=https://isbh.tmgrup.com.tr/sbh/2020/03/05/en-harika-adana-kebap-tarifi-adana-kebap-nasil-yapilir-1583404717106.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-      "food_detail": "Adana yöresine özgü acı kebap",
-      "category": "ogleYemegi",
-      "puan": 5
+      "etkinlik_name": "Havuz Topu",
+      "etkinlik_image":
+          "https://blog.n11.com/wp-content/uploads/2015/09/havuz-oyunlari-800x533.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Havuzda topla oyun",
+      "category": "oglenEtkinlikleri",
+      "yer": "Büyük Havuz",
+      "etkinlik_saat": "13:30"
     },
-    // {
-    //   "food_name": "Tavuk",
-    //   "food_image":
-    //       "https://generatorfun.com/code/uploads/Random-Food-image-12.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // },
-    // {
-    //   "food_name": "Börek",
-    //   "food_image":
-    //       "https://generatorfun.com/code/uploads/Random-Food-image-12.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // },
-    // {
-    //   "food_name": "Hamburger",
-    //   "food_image":
-    //       "https://generatorfun.com/code/uploads/Random-Food-image-7.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // },
-    // {
-    //   "food_name": "Patates Haşlaması",
-    //   "food_image":
-    //       "https://randomuser.me/api/portraits/men/32.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
-    //   "category": "ogleYemegi",
-    // }
+    {
+      "etkinlik_name": "Plaj Voleybolu",
+      "etkinlik_image":
+          "https://tvf.org.tr/wp-content/uploads/2022/06/BLG_3525-scaled.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Voleybol",
+      "category": "oglenEtkinlikleri",
+      "yer": "Plaj",
+      "etkinlik_saat": "15:30"
+    },
+  ];
+  List<dynamic> gece_etkinlikleri = [
+    {
+      "etkinlik_name": "Karaoke Gecesi",
+      "etkinlik_image":
+          "https://img.tamindir.com/2022/04/476720/android-icin-en-iyi-karaoke-uygulamalari-neler.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Sen de kendi şarkını söyle",
+      "category": "aksamEtkinlikleri",
+      "yer": "Amfi Tiyatro",
+      "etkinlik_saat": "20:30"
+    },
+    {
+      "etkinlik_name": "Latin Gecesi",
+      "etkinlik_image":
+          "https://dansakademi.com.tr/uploads/2022/03/latin-dansi.webp", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Latin şarkılarıyla gece",
+      "category": "aksamEtkinlikleri",
+      "yer": "Sahil kenarı",
+      "etkinlik_saat": "21:30"
+    },
+    {
+      "etkinlik_name": "Just Dance",
+      "etkinlik_image":
+          "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2mhcY3CjaWNkebLxQKI8wL/41007c3702473fdce93d280b1f6a0850/jd20_page_meta_image.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Kendi dans şovunu yap",
+      "category": "aksamEtkinlikleri",
+      "yer": "Sahne",
+      "etkinlik_saat": "22:30"
+    },
+  ];
+  List<dynamic> cocuk_etkinlikleri = [
+    {
+      "etkinlik_name": "Dondurma Yarışması",
+      "etkinlik_image":
+          "https://www.buseterim.com.tr/upload/default/2022/8/6/6802.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Dondurma yeme yarışması",
+      "category": "cocukEtkinlikleri",
+      "yer": "1",
+      "etkinlik_saat": "16:30"
+    },
+    {
+      "etkinlik_name": "Dans Saati",
+      "etkinlik_image":
+          "https://i.ytimg.com/vi/VgeotaMKsKY/maxresdefault.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Çocuk dans gösterisi!",
+      "category": "cocukEtkinlikleri",
+      "yer": "Amfi Tiyatro",
+      "etkinlik_saat": "19:30"
+    },
+    {
+      "etkinlik_name": "Yüz Boyama",
+      "etkinlik_image":
+          "https://www.pusulastore.com/UserFiles/Fotograflar/org/1002-carioca-yuz-boyama-carnaval-mask-up-carnival-3-pcs2-jpg-mask-up-carnival-3-pcs2.jpg", //https://randomuser.me/api/portraits/men/35.jpg",
+      "etkinlik_detail": "Boyalarla yüzümüzü renklendirelim!",
+      "category": "cocukEtkinlikleri",
+      "yer": "Amfi Tiyatro",
+      "etkinlik_saat": "20:30"
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -130,7 +154,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: kPrimaryColor),
+                        color: myColor1),
                   ),
                 ],
               ),
@@ -141,39 +165,33 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
         Container(
           width: MediaQuery.of(context).size.width, // EKRANIN GENİŞLİĞİ
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(left: 10.0, top: 20.0),
+          padding: EdgeInsets.only(left: 10.0),
           child: Text(
             "ÖĞLEN ETKİNLİKLERİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         oglenEtkinlikleriListeleme(),
         Container(
           width: MediaQuery.of(context).size.width, // EKRANIN GENİŞLİĞİ
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(left: 10.0, top: 20.0),
+          padding: EdgeInsets.only(left: 10.0),
           child: Text(
             "ÇOCUK ETKİNLİKLERİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         cocukEtkinlikleriListeleme(),
         Container(
           width: MediaQuery.of(context).size.width, // EKRANIN GENİŞLİĞİ
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(left: 10.0, top: 20.0),
+          padding: EdgeInsets.only(left: 10.0),
           child: Text(
             "GECE ETKİNLİKLERİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         geceEtkinlikleriListeleme()
@@ -189,7 +207,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 330,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -209,7 +227,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -267,7 +285,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                               child: IconButton(
                                                 icon: const Icon(
                                                     Icons.favorite_outline),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     Fluttertoast.showToast(
@@ -287,21 +305,19 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
                                   ]),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Container(
-                                width: 150,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 1),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 1),
+                                    child: Container(
+                                      height: 100,
+                                      width: 170,
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -336,28 +352,11 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                           SizedBox(
                                             height: 5,
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
                                         ],
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             )
                           ],
@@ -373,7 +372,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 330,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -393,7 +392,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -451,7 +450,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                               child: IconButton(
                                                 icon: const Icon(
                                                     Icons.favorite_outline),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     Fluttertoast.showToast(
@@ -478,14 +477,15 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Container(
-                                width: 150,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 1),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 1),
+                                    child: Container(
+                                      height: 100,
+                                      width: 170,
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -520,28 +520,11 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                           SizedBox(
                                             height: 5,
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
                                         ],
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             )
                           ],
@@ -557,14 +540,14 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 330,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-                      itemCount: sabah_etkinlikleri.length,
+                      itemCount: cocuk_etkinlikleri.length,
                       itemBuilder: (context, index) {
-                        var etkinlik_ = sabah_etkinlikleri[index];
+                        var etkinlik_ = cocuk_etkinlikleri[index];
                         return Column(
                           children: [
                             Container(
@@ -577,7 +560,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -635,7 +618,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                               child: IconButton(
                                                 icon: const Icon(
                                                     Icons.favorite_outline),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     Fluttertoast.showToast(
@@ -662,14 +645,15 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Container(
-                                width: 150,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 1),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 1),
+                                    child: Container(
+                                      height: 100,
+                                      width: 170,
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -704,28 +688,11 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                           SizedBox(
                                             height: 5,
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
                                         ],
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             )
                           ],
@@ -741,14 +708,14 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 330,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-                      itemCount: sabah_etkinlikleri.length,
+                      itemCount: gece_etkinlikleri.length,
                       itemBuilder: (context, index) {
-                        var etkinlik_ = sabah_etkinlikleri[index];
+                        var etkinlik_ = gece_etkinlikleri[index];
                         return Column(
                           children: [
                             Container(
@@ -761,7 +728,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -819,7 +786,7 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                               child: IconButton(
                                                 icon: const Icon(
                                                     Icons.favorite_outline),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     Fluttertoast.showToast(
@@ -846,14 +813,15 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Container(
-                                width: 150,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 1),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 1),
+                                    child: Container(
+                                      height: 100,
+                                      width: 170,
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -885,31 +853,11 @@ class _EtkinliklerFormState extends State<EtkinliklerForm> {
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
                                         ],
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             )
                           ],

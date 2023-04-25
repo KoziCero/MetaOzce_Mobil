@@ -91,10 +91,8 @@ class _FavPageState extends State<FavPage> {
                                                         Container(
                                                           height: 100,
                                                           width: 150,
-                                                          child: Image(
-                                                            image: AssetImage(
-                                                              '${listofDocumentSnap[index]['otelimageUrl']}',
-                                                            ),
+                                                          child: Image.network(
+                                                            '${listofDocumentSnap[index]['otelimageUrl']}',
                                                             fit: BoxFit.cover,
                                                           ),
                                                         ),

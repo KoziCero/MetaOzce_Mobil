@@ -57,7 +57,7 @@ class Body extends StatelessWidget {
                 children: const <Widget>[
                   Text(
                     "Parolayı unuttuysanız resepsiyondan alabilirsiniz.",
-                    style: TextStyle(color: kPrimaryColor, fontSize: 13),
+                    style: TextStyle(color: myColor1, fontSize: 13),
                   ),
                 ],
               ),
@@ -68,7 +68,7 @@ class Body extends StatelessWidget {
                 Text(
                   "(RESEPSİYONU ARA)",
                   style: TextStyle(
-                      color: kPrimaryColor,
+                      color: myColor1,
                       fontWeight: FontWeight.bold,
                       fontSize: 15),
                 ),

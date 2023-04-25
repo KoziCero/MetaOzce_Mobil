@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meta_ozce_0/const/constant.dart';
 
 class ResponsiveButton extends StatelessWidget {
   bool? isResponsive;
@@ -12,7 +13,7 @@ class ResponsiveButton extends StatelessWidget {
         height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Theme.of(context).primaryColor,
+          color: myColor1,
         ),
         child: Row(
           mainAxisAlignment: isResponsive == true

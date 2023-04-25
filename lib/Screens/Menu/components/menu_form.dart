@@ -13,6 +13,15 @@ class MenuForm extends StatefulWidget {
 }
 
 class _MenuFormState extends State<MenuForm> {
+  Text _buildRatingStars(int rating) {
+    String stars = '';
+    for (int i = 0; i < rating; i++) {
+      stars += '⭐ ';
+    }
+    stars.trim();
+    return Text(stars);
+  }
+
   List<dynamic> menu_kahvalti = [
     {
       "food_name": "Omlet",
@@ -111,6 +120,53 @@ class _MenuFormState extends State<MenuForm> {
       "food_name": "Adana Kebap",
       "food_image":
           "https://iasbh.tmgrup.com.tr/040972/800/420/0/136/1152/740?u=https://isbh.tmgrup.com.tr/sbh/2020/03/05/en-harika-adana-kebap-tarifi-adana-kebap-nasil-yapilir-1583404717106.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
+      "food_detail": "Adana yöresine özgü acı lezzet",
+      "category": "aksamYemegi",
+      "puan": 5,
+      "favori": false
+    },
+    {
+      "food_name": "İskender",
+      "food_image":
+          "https://upload.wikimedia.org/wikipedia/commons/0/0d/%C4%B0skender_kebap.JPG",
+      "food_detail": "İskender kebap",
+      "category": "aksamYemegi",
+      "puan": 5,
+      "favori": false
+    },
+    {
+      "food_name": "Tavuk Şiş",
+      "food_image":
+          "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/12/tavuk-sis-tarifi.jpg",
+      "food_detail": "Lokum kıvamında şişte tavuk",
+      "category": "aksamYemegi",
+      "puan": 5,
+      "favori": false
+    },
+    {
+      "food_name": "Fırında Alabalık",
+      "food_image":
+          "https://i.lezzet.com.tr/images-xxlarge-secondary/alabalik-nasil-pisirilir-84197c45-c87c-428b-91c7-a0cd714a3ccc.jpg",
+      "food_detail": "Fırında pişirilmiş alabalık",
+      "category": "aksamYemegi",
+      "puan": 5,
+      "favori": false
+    },
+    {
+      "food_name": "Karides",
+      "food_image":
+          "https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-popcorn-shrimp-1658240003.jpg",
+      "food_detail": "Kızartılmış karides",
+      "category": "aksamYemegi",
+      "puan": 5,
+      "favori": false
+    },
+  ];
+  List<dynamic> menu_Icecekler = [
+    {
+      "food_name": "Soğuk Gazlı İçecekler",
+      "food_image":
+          "https://iasbh.tmgrup.com.tr/040972/800/420/0/136/1152/740?u=https://isbh.tmgrup.com.tr/sbh/2020/03/05/en-harika-adana-kebap-tarifi-adana-kebap-nasil-yapilir-1583404717106.jpg", //"https://randomuser.me/api/portraits/men/35.jpg",
       "food_detail": "Adana yöresine özgü acı kebap",
       "category": "ogleYemegi",
       "puan": 5,
@@ -168,7 +224,7 @@ class _MenuFormState extends State<MenuForm> {
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: kPrimaryColor),
+                        color: myColor1),
                   ),
                 ],
               ),
@@ -179,26 +235,22 @@ class _MenuFormState extends State<MenuForm> {
         Container(
           width: MediaQuery.of(context).size.width, // EKRANIN GENİŞLİĞİ
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(left: 10.0, top: 20.0),
+          padding: EdgeInsets.only(left: 10.0),
           child: Text(
             "ÖĞLE YEMEĞİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         ogleYemegiListeleme(),
         Container(
           width: MediaQuery.of(context).size.width, // EKRANIN GENİŞLİĞİ
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(left: 10.0, top: 20.0),
+          padding: EdgeInsets.only(left: 10.0),
           child: Text(
             "AKŞAM YEMEĞİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         aksamYemegiListeleme(),
@@ -214,7 +266,7 @@ class _MenuFormState extends State<MenuForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 330,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -234,7 +286,7 @@ class _MenuFormState extends State<MenuForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -294,7 +346,7 @@ class _MenuFormState extends State<MenuForm> {
                                                     ? Icon(Icons.favorite)
                                                     : Icon(
                                                         Icons.favorite_border),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     menu_['favori'] =
@@ -316,13 +368,10 @@ class _MenuFormState extends State<MenuForm> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
                                   ]),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
+                              padding: const EdgeInsets.only(left: 5.0),
                               child: Container(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -330,11 +379,26 @@ class _MenuFormState extends State<MenuForm> {
                                     Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 1),
-                                      child: Flexible(
+                                      child: Container(
+                                        //color: Colors.red,
+                                        height: 100,
+                                        width: 170,
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: <Widget>[
+                                                _buildRatingStars(
+                                                    menu_['puan']),
+
+                                                // Text(favoriDoctors[index]
+                                                //         ['yildizOrtalamasi']
+                                                //     .toString()),
+                                              ],
+                                            ),
                                             Text(
                                               menu_['food_name'],
                                               style: TextStyle(
@@ -348,30 +412,13 @@ class _MenuFormState extends State<MenuForm> {
                                             Text(
                                               menu_['food_detail'],
                                               style: TextStyle(
-                                                fontSize: 10,
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             SizedBox(
                                               height: 5,
                                             ),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceAround,
-                                              children: <Widget>[
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.yellow,
-                                                  size: 20,
-                                                ),
-                                                SizedBox(
-                                                  width: 10,
-                                                ),
-                                                // Text(favoriDoctors[index]
-                                                //         ['yildizOrtalamasi']
-                                                //     .toString()),
-                                              ],
-                                            )
                                           ],
                                         ),
                                       ),
@@ -394,7 +441,7 @@ class _MenuFormState extends State<MenuForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 350,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -414,7 +461,7 @@ class _MenuFormState extends State<MenuForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -424,23 +471,7 @@ class _MenuFormState extends State<MenuForm> {
                                     Stack(
                                       children: [
                                         InkWell(
-                                          onTap: () {
-                                            /*
-                                              dc!.fetchDoctorDetail(display_list[
-                                                      index]
-                                                  .oid);*/
-                                            // Navigator.push(
-                                            //   context,
-                                            //   MaterialPageRoute(
-                                            //       builder: (context) =>
-                                            //           DoctorProfileScreen(
-                                            //             favoriDoctor:
-                                            //                 favoriDoctors[index],
-
-                                            //             //id: display_list[index].ID!,
-                                            //           )),
-                                            // );
-                                          },
+                                          onTap: () {},
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.all(
                                               Radius.circular(15),
@@ -474,7 +505,7 @@ class _MenuFormState extends State<MenuForm> {
                                                     ? Icon(Icons.favorite)
                                                     : Icon(
                                                         Icons.favorite_border),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     menu_['favori'] =
@@ -510,11 +541,26 @@ class _MenuFormState extends State<MenuForm> {
                                     Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 1),
-                                      child: Flexible(
+                                      child: Container(
+                                        //color: Colors.red,
+                                        height: 100,
+                                        width: 170,
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: <Widget>[
+                                                _buildRatingStars(
+                                                    menu_['puan']),
+
+                                                // Text(favoriDoctors[index]
+                                                //         ['yildizOrtalamasi']
+                                                //     .toString()),
+                                              ],
+                                            ),
                                             Text(
                                               menu_['food_name'],
                                               style: TextStyle(
@@ -528,30 +574,13 @@ class _MenuFormState extends State<MenuForm> {
                                             Text(
                                               menu_['food_detail'],
                                               style: TextStyle(
-                                                fontSize: 10,
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             SizedBox(
                                               height: 5,
                                             ),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceAround,
-                                              children: <Widget>[
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.yellow,
-                                                  size: 20,
-                                                ),
-                                                SizedBox(
-                                                  width: 10,
-                                                ),
-                                                // Text(favoriDoctors[index]
-                                                //         ['yildizOrtalamasi']
-                                                //     .toString()),
-                                              ],
-                                            )
                                           ],
                                         ),
                                       ),
@@ -574,7 +603,7 @@ class _MenuFormState extends State<MenuForm> {
             color: kPrimaryLightColor,
           ),
           Container(
-              height: 300,
+              height: 400,
               child: Center(
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -594,7 +623,7 @@ class _MenuFormState extends State<MenuForm> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         blurRadius: 4,
                                         spreadRadius: 2)
                                   ]),
@@ -654,7 +683,7 @@ class _MenuFormState extends State<MenuForm> {
                                                     ? Icon(Icons.favorite)
                                                     : Icon(
                                                         Icons.favorite_border),
-                                                color: kPrimaryColor,
+                                                color: myColor1,
                                                 onPressed: () {
                                                   setState(() {
                                                     menu_['favori'] =
@@ -682,55 +711,44 @@ class _MenuFormState extends State<MenuForm> {
                                   ]),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
+                              padding: EdgeInsets.only(left: 8.0, top: 15),
                               child: Container(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                // color: Colors.red,
+                                height: 100,
+                                width: 170,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Flexible(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            menu_['food_name'],
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text(
-                                            menu_['food_detail'],
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.yellow,
-                                                size: 20,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              // Text(favoriDoctors[index]
-                                              //         ['yildizOrtalamasi']
-                                              //     .toString()),
-                                            ],
-                                          )
-                                        ],
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: <Widget>[
+                                        _buildRatingStars(menu_['puan']),
+
+                                        // Text(favoriDoctors[index]
+                                        //         ['yildizOrtalamasi']
+                                        //     .toString()),
+                                      ],
+                                    ),
+                                    Text(
+                                      menu_['food_name'],
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
                                       ),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      menu_['food_detail'],
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
                                     ),
                                   ],
                                 ),

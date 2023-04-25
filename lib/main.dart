@@ -11,7 +11,7 @@ import 'package:meta_ozce_0/Screens/Otel_Konaklayan/home_screen_konak.dart';
 import 'package:meta_ozce_0/Screens/Welcome/welcome_screen.dart';
 import 'package:meta_ozce_0/Screens/WelcomeRobot/welcome_screen_robot.dart';
 import 'package:meta_ozce_0/components/provider.dart';
-import 'package:meta_ozce_0/constants.dart';
+
 import 'package:meta_ozce_0/pages/Konaklayan/Main/main_screen.dart';
 
 import 'package:meta_ozce_0/widgets/navigation_bakan1.dart';

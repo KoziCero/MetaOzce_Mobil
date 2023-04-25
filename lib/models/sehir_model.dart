@@ -18,7 +18,8 @@ class Sehir_olustur {
 
 List<Otel> antalya = [
   Otel(
-    imageUrl: 'assets/images/oteller/antalya1.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer_146671-18728.jpg?size=626&ext=jpg',
     name: 'Ayshenia',
     rating: 5,
     price: '3.490 ₺',
@@ -31,7 +32,8 @@ List<Otel> antalya = [
         'Fitness Center, Su Sporları, Alışveriş Merkezi, Fotoğrafçı, Araba Kiralama, 2 Adet Toplantı Salonu, Açık Disco ve iskele bulunmaktadır. Çamaşır-Ütü  Servisi, Döviz bozdurma, odalarda kasa(ücretli), Lobide ücretsiz kablosuz internet hizmeti bulunmaktadır. Sağlık Hizmeti ücretli olup24 saat ulaşılabilir durumdadır.',
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/antalya2.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg?size=626&ext=jpg',
     name: 'Nirvana Dolce Vita',
     rating: 4,
     price: '3.100 ₺',
@@ -49,7 +51,8 @@ List<Otel> antalya = [
         '* Tesise evcil hayvan kabul edilmemektedir.\n',
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/antalya3.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/swimming-pool-beach-luxury-hotel-type-entertainment-complex-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey_146671-18726.jpg?size=626&ext=jpg',
     name: 'Crystal Centro Resort',
     rating: 4,
     price: '3.250 ₺',
@@ -67,7 +70,8 @@ List<Otel> antalya = [
 ];
 List<Otel> mugla = [
   Otel(
-    imageUrl: 'assets/images/oteller/mugla1.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/ocean-travel-modern-nobody-infinity_1203-4520.jpg?size=626&ext=jpg',
     name: 'Khai Hotel Bodrum',
     rating: 5,
     price: '16.000 ₺',
@@ -83,7 +87,8 @@ List<Otel> mugla = [
         '* Tesisin tamamında ücretsiz wifi hizmeti vardır.\n',
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/mugla2.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/pool-with-palm-trees-sides_1203-2070.jpg?size=626&ext=jpg&ga=GA1.2.1404248509.1682363564&semt=robertav1_2_sidr',
     name: 'Rixos Premium Bodrum',
     rating: 5,
     price: '17.350 ₺',
@@ -97,7 +102,8 @@ List<Otel> mugla = [
         " Maldivler’i aratmayacak güzellikteki turkuaz denizin bembeyaz kumlarla buluştuğu eşsiz plajı, kaliteyi ve şıklığı bir arada sunan ayrıcalıklı hizmet anlayışıyla Rixos Premium Bodrum, unutulmaz bir tatil için misafirlerini bekliyor. Kaynar mevkiinde kendine ait koyunda her yaştan misafirine kendilerini özel hissettirmeyi başaran Rixos Premium Bodrum, dileyenlere eğlenceye ve kalabalıklara karışma olanağı dileyenlere yalıtılmış ve huzurlu bir atmosfer sunuyor.\n",
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/mugla3.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/tropical-hotel-holiday-background-resort_1203-4943.jpg?size=626&ext=jpg',
     name: 'Elite Hotel Yalıkavak',
     rating: 3,
     price: '4.750 ₺',
@@ -113,7 +119,8 @@ List<Otel> mugla = [
 ];
 List<Otel> izmir = [
   Otel(
-    imageUrl: 'assets/images/oteller/izmir1.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/swimming-pool-beach-luxury-hotel-outdoor-pools-spa-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey_146671-18751.jpg?size=626&ext=jpg',
     name: 'Vadi Boutique Hotel',
     rating: 4,
     price: '13.608 ₺',
@@ -128,7 +135,8 @@ List<Otel> izmir = [
         '* Odalarda Minibar- saç kurutma makinesi - Uydu tv - Duşa kabin - Balkon - Telefon - Çay-kahve set-up ve ikram su Çelik kasa - Duman dedektörü - Yağmurlama yangın söndürme sistemi, ahşap - parke zemin mevcuttur.\n',
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/izmir1.png',
+    imageUrl:
+        'https://img.freepik.com/free-photo/swimming-pool_74190-2109.jpg?size=626&ext=jpg',
     name: 'Bera Hotel',
     rating: 4,
     price: '2.300 ₺',
@@ -146,7 +154,8 @@ List<Otel> izmir = [
         '* Tesise evcil hayvan kabul edilmemektedir.\n',
   ),
   Otel(
-    imageUrl: 'assets/images/oteller/izmir1.png',
+    imageUrl:
+        'https://img.freepik.com/premium-photo/swimming-pool-beach-luxury-hotel_146671-19401.jpg?size=626&ext=jpg',
     name: 'Wome Deluxe',
     rating: 3,
     price: '1.780 ₺',

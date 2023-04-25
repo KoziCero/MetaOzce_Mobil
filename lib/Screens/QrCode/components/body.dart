@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Screens/QrCode/components/second.dart';
 
 import '../../../components/rounded_button.dart';
-import '../../../constants.dart';
+import '../../../const/constant.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -36,9 +36,7 @@ class _HomeState extends State<Home> {
             const Text(
               '  QR / Barcode Scanner',
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                  color: kPrimaryColor),
+                  fontWeight: FontWeight.bold, fontSize: 25, color: myColor1),
             ),
             const SizedBox(height: 100),
             Image.asset(

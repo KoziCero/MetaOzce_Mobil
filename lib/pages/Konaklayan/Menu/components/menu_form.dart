@@ -55,9 +55,7 @@ class _MenuFormState extends State<MenuForm> {
           child: Text(
             "KAHVALTI",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         kahvaltiListeleme(),
@@ -68,9 +66,7 @@ class _MenuFormState extends State<MenuForm> {
           child: Text(
             "ÖĞLE YEMEĞİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         kahvaltiListeleme(),
@@ -81,9 +77,7 @@ class _MenuFormState extends State<MenuForm> {
           child: Text(
             "AKŞAM YEMEĞİ",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+                fontSize: 20, fontWeight: FontWeight.bold, color: myColor1),
           ),
         ),
         kahvaltiListeleme(),
@@ -112,9 +106,7 @@ class _MenuFormState extends State<MenuForm> {
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [
                             BoxShadow(
-                                color: kPrimaryColor,
-                                blurRadius: 4,
-                                spreadRadius: 2)
+                                color: myColor1, blurRadius: 4, spreadRadius: 2)
                           ]),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,7 +162,7 @@ class _MenuFormState extends State<MenuForm> {
                                     child: Center(
                                       child: Icon(
                                         Icons.favorite_outline,
-                                        color: kPrimaryColor,
+                                        color: myColor1,
                                         size: 25,
                                       ),
                                     ),
